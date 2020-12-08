@@ -46,13 +46,34 @@ Once the data was downloaded to our local GitHub repository, both datasets were 
     * Developed a function to calculate the average FIFA World Ranking (2015-2019) by Country.
     * Converted new dataframe to "data/fifa_data_clean.csv" in the /data folder. 
 
-"World Happiness Report up to 2020" Data Cleaning: 
+"World Happiness Report up to 2020" Data Cleaning:
+
+    * Dependencies: pandas / os / glob
+    * Imported five happy_year.csv files from Happiness/Resources folder.
+    * Extracted useful columns from the five original happy_year.csv files.
+    * Cleaned up the data in each file by reorganizing and renaming columns.
+    * Created a new dataframe with country and region to merge into three individual happy_year.csv files.
+    * Evaluated the files for null values. 
+    * Eliminated all null values. 
+    * Converted new clean dataframes for each year and region dataframe into one dataframe "Happiness/Happy_All_years.csv".
 
 #### Load
 
-## Observable Trends
+After the raw data cleaning, we created three individual tables in PostgreSQL. The tables created are as follows: 
+
+    "fifa Base Table
+        * Content Column_name [ id, rank, country_full, confederation, rank_date ] 
+
+    "happinessYear Base Table
+        * Content Column_name [ country, region, happinessrank, happinessscore, gdp, health, freedom, trust, generosity, happiessyear ]
+
+    "happinessRegion Base Table
+        * Content Column_name [ country, region ]
+
 
 ### Conclusion
+
+Our data framework can be utilized to query any of the above mentioned "happiness" columns by fifaBaseTable.rank search and vise versa. 
 
 ### Acknowledgements
 
