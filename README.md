@@ -1,5 +1,5 @@
 
-![](images/fifaworldcuptrophy)
+![](/images/fifaworldcuptrophy.jpg)
 ETL : FIFA Rankings and World Happiness Analysis Project - Predicting the 2030 World Cup Host
 
 - - -
